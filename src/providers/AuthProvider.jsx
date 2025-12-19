@@ -27,19 +27,19 @@ const AuthProvider = ({ children }) => {
     return createUserWithEmailAndPassword(auth, email, password);
   };
 
-  
+  // Sign in with email and password
   const signIn = (email, password) => {
     setLoading(true);
     return signInWithEmailAndPassword(auth, email, password);
   };
 
-  
+  // Sign in with Google
   const signInWithGoogle = () => {
     setLoading(true);
     return signInWithPopup(auth, googleProvider);
   };
 
-  
+  // Update user profile
   const updateUserProfile = (name, photo) => {
     return updateProfile(auth.currentUser, {
       displayName: name,
@@ -47,27 +47,29 @@ const AuthProvider = ({ children }) => {
     });
   };
 
-  
+  // Sign out
   const logOut = () => {
     setLoading(true);
     return signOut(auth);
   };
 
+  // Reset password
   const resetPassword = (email) => {
     return sendPasswordResetEmail(auth, email);
   };
 
-  
+  // Email verification
   const verifyEmail = () => {
     return sendEmailVerification(auth.currentUser);
   };
 
+  // Observer for auth state
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (currentUser) => {
       setUser(currentUser);
       
       if (currentUser) {
-        
+        // Get token
         const userInfo = { email: currentUser.email };
         try {
           const res = await axiosPublic.post('/jwt', userInfo);

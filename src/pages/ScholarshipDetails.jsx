@@ -21,7 +21,7 @@ const ScholarshipDetails = () => {
   const axiosSecure = useAxiosSecure();
   const { user } = useAuth();
 
-  
+  // Fetch scholarship details
   const { data: scholarship, isLoading } = useQuery({
     queryKey: ['scholarship', id],
     queryFn: async () => {
@@ -30,7 +30,7 @@ const ScholarshipDetails = () => {
     }
   });
 
-  
+  // Fetch reviews
   const { data: reviews = [] } = useQuery({
     queryKey: ['reviews', id],
     queryFn: async () => {
@@ -39,7 +39,7 @@ const ScholarshipDetails = () => {
     }
   });
 
-  
+  // Fetch related scholarships
   const { data: relatedScholarships = [] } = useQuery({
     queryKey: ['relatedScholarships', scholarship?.scholarshipCategory, id],
     enabled: !!scholarship?.scholarshipCategory,
@@ -111,7 +111,7 @@ const ScholarshipDetails = () => {
 
       <div className="pt-24 pb-16 bg-base-200 min-h-screen">
         <div className="container-custom">
-          
+          {/* Back Button */}
           <Link
             to="/scholarships"
             className="inline-flex items-center gap-2 text-slate-600 hover:text-primary mb-6 transition-colors"
@@ -121,14 +121,14 @@ const ScholarshipDetails = () => {
           </Link>
 
           <div className="grid lg:grid-cols-3 gap-8">
-            
+            {/* Main Content */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               className="lg:col-span-2"
             >
               <div className="card-custom overflow-hidden">
-                
+                {/* Image */}
                 <div className="relative h-64 md:h-80">
                   <img
                     src={scholarship.universityImage}
@@ -147,7 +147,7 @@ const ScholarshipDetails = () => {
                   </div>
                 </div>
 
-                
+                {/* Details */}
                 <div className="p-6 md:p-8">
                   <div className="grid md:grid-cols-2 gap-6 mb-8">
                     <div className="flex items-center gap-3">
@@ -215,7 +215,7 @@ const ScholarshipDetails = () => {
                     </div>
                   </div>
 
-                  
+                  {/* Description */}
                   <div className="mb-8">
                     <h2 className="heading-secondary mb-4">About This Scholarship</h2>
                     <p className="text-slate-600 leading-relaxed">
@@ -227,7 +227,7 @@ const ScholarshipDetails = () => {
                     </p>
                   </div>
 
-                  
+                  {/* Stipend/Coverage */}
                   <div className="bg-base-200 rounded-xl p-6 mb-8">
                     <h3 className="font-semibold text-lg mb-4">Coverage & Stipend</h3>
                     <ul className="space-y-2 text-slate-600">
@@ -240,7 +240,7 @@ const ScholarshipDetails = () => {
                 </div>
               </div>
 
-              
+              {/* Reviews Section */}
               <div className="card-custom p-6 md:p-8 mt-8">
                 <h2 className="heading-secondary mb-6">Student Reviews</h2>
                 
@@ -282,14 +282,19 @@ const ScholarshipDetails = () => {
               </div>
             </motion.div>
 
-            
+            {/* Sidebar */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 0.2 }}
             >
               <div className="card-custom p-6 sticky top-24">
-               
+                {/* <div className="text-center mb-6">
+                  <p className="text-sm text-slate-500 mb-2">Total Application Fee</p>
+                  <p className="text-4xl font-display font-bold text-primary">
+                    ${(scholarship.applicationFees || 0) + (scholarship.serviceCharge || 0)}
+                  </p>
+                </div> */}
 
                 <div className="space-y-3 mb-6 text-sm">
                   <div className="flex justify-between">
@@ -332,7 +337,7 @@ const ScholarshipDetails = () => {
             </motion.div>
           </div>
 
-          
+          {/* Related Scholarships */}
           {relatedScholarships.length > 0 && (
             <div className="mt-16">
               <h2 className="heading-secondary mb-8">You May Also Like</h2>

@@ -64,7 +64,7 @@ const Login = () => {
               </div>
 
               <form onSubmit={handleSubmit(onSubmit)} className="space-y-5">
-                
+                {/* Email */}
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">
                     Email Address
@@ -89,7 +89,7 @@ const Login = () => {
                   )}
                 </div>
 
-                
+                {/* Password */}
                 <div>
                   <label className="block text-sm font-medium text-slate-700 mb-2">
                     Password
@@ -126,14 +126,14 @@ const Login = () => {
                 </button>
               </form>
 
-              
+              {/* Divider */}
               <div className="flex items-center my-6">
                 <div className="flex-1 border-t border-slate-200"></div>
                 <span className="px-4 text-sm text-slate-500">OR</span>
                 <div className="flex-1 border-t border-slate-200"></div>
               </div>
 
-              
+              {/* Social Login */}
               <button
                 onClick={handleGoogleLogin}
                 className="w-full py-3 px-4 border border-slate-200 rounded-lg flex items-center justify-center gap-3 hover:bg-slate-50 transition-colors"
@@ -142,7 +142,7 @@ const Login = () => {
                 <span className="font-medium text-slate-700">Continue with Google</span>
               </button>
 
-              
+              {/* Register Link */}
               <p className="text-center mt-6 text-slate-500">
                 Don't have an account?{' '}
                 <Link to="/register" className="text-primary font-medium hover:underline">

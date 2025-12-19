@@ -55,12 +55,12 @@ const MyProfile = () => {
       </div>
       
       <div className="bg-white rounded-lg sm:rounded-2xl shadow-lg overflow-hidden">
-        
+        {/* Cover Image */}
         <div className="h-24 sm:h-32 md:h-48 bg-gradient-to-r from-blue-600 to-purple-600"></div>
         
-        
+        {/* Profile Content */}
         <div className="relative px-4 sm:px-6 md:px-8 pb-6 sm:pb-8">
-          
+          {/* Avatar */}
           <div className="absolute -top-12 sm:-top-16 left-4 sm:left-6 md:left-8">
             <div className="relative">
               <img
@@ -76,7 +76,7 @@ const MyProfile = () => {
             </div>
           </div>
           
-          
+          {/* Edit Button */}
           <div className="flex justify-end pt-4 sm:pt-6">
             {!isEditing ? (
               <button
@@ -95,7 +95,7 @@ const MyProfile = () => {
             )}
           </div>
           
-          
+          {/* Profile Info */}
           <div className="mt-12 sm:mt-16 md:mt-8">
             {isEditing ? (
               <form onSubmit={handleSubmit} className="space-y-4 max-w-md">
@@ -166,7 +166,7 @@ const MyProfile = () => {
             )}
           </div>
           
-          
+          {/* Stats */}
           <div className="mt-8 sm:mt-10 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4">
             <div className="bg-blue-50 rounded-lg sm:rounded-xl p-4 sm:p-5 text-center">
               <p className="text-2xl sm:text-3xl font-bold text-blue-600">

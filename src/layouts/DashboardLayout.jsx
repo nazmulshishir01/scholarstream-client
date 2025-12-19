@@ -14,7 +14,7 @@ const DashboardLayout = () => {
   const [role] = useRole();
   const location = useLocation();
 
-  
+  // Close sidebar on route change
   useState(() => {
     setSidebarOpen(false);
   }, [location]);
@@ -58,7 +58,7 @@ const DashboardLayout = () => {
 
   return (
     <div className="min-h-screen bg-base-200">
-    
+      {/* Mobile Header */}
       <div className="lg:hidden sticky top-0 z-40 bg-secondary text-white p-4 flex items-center justify-between shadow-md">
         <Link to="/" className="text-lg sm:text-xl font-display font-bold">
           ScholarStream
@@ -73,14 +73,14 @@ const DashboardLayout = () => {
       </div>
 
       <div className="flex min-h-[calc(100vh-70px)] lg:min-h-screen">
-        
+        {/* Sidebar */}
         <aside
           className={`fixed lg:static inset-y-0 left-0 z-50 w-64 sm:w-72 bg-secondary text-white transform transition-transform duration-300 ease-in-out lg:translate-x-0 ${
             sidebarOpen ? 'translate-x-0' : '-translate-x-full'
           } lg:min-h-screen`}
         >
           <div className="h-full flex flex-col overflow-y-auto">
-            
+            {/* Logo Section */}
             <div className="p-4 sm:p-6 border-b border-slate-700 flex-shrink-0">
               <Link 
                 to="/" 
@@ -100,7 +100,7 @@ const DashboardLayout = () => {
               </Link>
             </div>
 
-            
+            {/* User Info Section */}
             <div className="p-4 sm:p-6 border-b border-slate-700 flex-shrink-0">
               <div className="flex items-center gap-3 sm:gap-4">
                 <img
@@ -115,7 +115,7 @@ const DashboardLayout = () => {
               </div>
             </div>
 
-            
+            {/* Navigation */}
             <nav className="flex-1 p-3 sm:p-4 overflow-y-auto">
               <ul className="space-y-1 sm:space-y-2">
                 {links.map((link) => (
@@ -138,7 +138,7 @@ const DashboardLayout = () => {
                 ))}
               </ul>
 
-             
+              {/* Bottom Links */}
               <div className="mt-6 sm:mt-8 pt-4 sm:pt-8 border-t border-slate-700">
                 <NavLink
                   to="/"
@@ -160,7 +160,7 @@ const DashboardLayout = () => {
           </div>
         </aside>
 
-        
+        {/* Overlay for mobile */}
         {sidebarOpen && (
           <div
             className="fixed inset-0 bg-black/50 z-40 lg:hidden"
@@ -169,7 +169,7 @@ const DashboardLayout = () => {
           />
         )}
 
-        
+        {/* Main Content */}
         <main className="flex-1 w-full overflow-hidden">
           <div className="p-3 sm:p-4 md:p-6 lg:p-8 h-full overflow-y-auto">
             <Outlet />

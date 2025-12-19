@@ -69,7 +69,7 @@ const PaymentFailed = () => {
             </ul>
           </div>
 
-          
+          {/* Action Buttons */}
           <div className="space-y-3">
             <Link
               to="/dashboard/my-applications"
@@ -88,7 +88,7 @@ const PaymentFailed = () => {
             </button>
           </div>
 
-          
+          {/* Help Link */}
           <p className="mt-6 text-sm text-gray-500">
             Need help?{' '}
             <a href="mailto:support@scholarstream.com" className="text-blue-600 hover:underline">

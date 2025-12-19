@@ -132,7 +132,7 @@ const ManageUsers = () => {
         <p className="text-gray-600 text-sm sm:text-base mt-1">View and manage platform users</p>
       </div>
       
-      
+      {/* Stats Grid */}
       <div className="grid grid-cols-2 lg:grid-cols-4 gap-2 sm:gap-4 mb-6">
         {stats.map((stat, idx) => (
           <div key={idx} className={`${stat.color} rounded-lg sm:rounded-xl p-4 sm:p-5`}>
@@ -142,7 +142,7 @@ const ManageUsers = () => {
         ))}
       </div>
 
-      
+      {/* Filters */}
       <div className="mb-4 sm:mb-6 flex flex-col sm:flex-row gap-3">
         <select
           value={roleFilter}
@@ -173,7 +173,7 @@ const ManageUsers = () => {
         </div>
       ) : (
         <>
-          
+          {/* Desktop Table View */}
           <div className="hidden md:block bg-white rounded-lg sm:rounded-xl shadow overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -246,11 +246,11 @@ const ManageUsers = () => {
             </div>
           </div>
 
-          
+          {/* Mobile Card View */}
           <div className="md:hidden space-y-3 sm:space-y-4">
             {filteredUsers.map((userData) => (
               <div key={userData._id} className="bg-white rounded-lg shadow p-4 sm:p-5 space-y-3">
-                
+                {/* User Header */}
                 <div className="flex items-start justify-between gap-2">
                   <div className="flex items-center gap-3 min-w-0">
                     <img
@@ -277,7 +277,7 @@ const ManageUsers = () => {
                   )}
                 </div>
 
-                
+                {/* Role Section */}
                 <div className="pt-3 border-t border-gray-200">
                   <p className="text-xs text-gray-500 mb-2">Current Role</p>
                   <span className={`px-2 py-1 text-xs font-medium rounded-full capitalize inline-block ${getRoleBadge(userData.role)}`}>
@@ -285,7 +285,7 @@ const ManageUsers = () => {
                   </span>
                 </div>
 
-                
+                {/* Change Role Section */}
                 {userData.email !== currentUser?.email && (
                   <div className="pt-2 border-t border-gray-200">
                     <label className="text-xs text-gray-500 mb-2 block">Change Role</label>

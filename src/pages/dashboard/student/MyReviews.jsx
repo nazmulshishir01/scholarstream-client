@@ -113,7 +113,7 @@ const MyReviews = () => {
         </div>
       ) : (
         <>
-          
+          {/* Desktop Table View */}
           <div className="hidden md:block bg-white rounded-lg sm:rounded-xl shadow overflow-hidden">
             <div className="overflow-x-auto">
               <table className="w-full">
@@ -173,7 +173,7 @@ const MyReviews = () => {
             </div>
           </div>
 
-          
+          {/* Mobile Card View */}
           <div className="md:hidden space-y-3 sm:space-y-4">
             {reviews.map((review) => (
               <div key={review._id} className="bg-white rounded-lg shadow p-4 sm:p-5 space-y-3">
@@ -226,7 +226,7 @@ const MyReviews = () => {
         </>
       )}
 
-      
+      {/* Edit Modal */}
       {showEditModal && selectedReview && (
         <div className="fixed inset-0 bg-black/50 flex items-center justify-center z-50 p-4">
           <div className="bg-white rounded-lg sm:rounded-xl max-w-md w-full">

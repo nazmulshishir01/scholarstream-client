@@ -69,7 +69,7 @@ const Analytics = () => {
         <p className="text-gray-600 text-sm sm:text-base mt-1">Platform statistics and insights</p>
       </div>
       
-      
+      {/* Stats Cards */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4 mb-6 sm:mb-8">
         {stats.map((stat, index) => (
           <div key={index} className={`${stat.lightColor} rounded-lg sm:rounded-xl shadow p-4 sm:p-6`}>
@@ -86,9 +86,9 @@ const Analytics = () => {
         ))}
       </div>
 
-      
+      {/* Charts */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6">
-        
+        {/* Bar Chart - Applications by University */}
         <div className="bg-white rounded-lg sm:rounded-xl shadow p-4 sm:p-6">
           <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-4">Applications by University</h2>
           {applicationsByUniversity.length > 0 ? (
@@ -119,7 +119,7 @@ const Analytics = () => {
           )}
         </div>
 
-        
+        {/* Pie Chart - Applications by Category */}
         <div className="bg-white rounded-lg sm:rounded-xl shadow p-4 sm:p-6">
           <h2 className="text-base sm:text-lg font-semibold text-gray-800 mb-4">Applications by Category</h2>
           {applicationsByCategory.length > 0 ? (
@@ -153,10 +153,10 @@ const Analytics = () => {
         </div>
       </div>
 
-      
+      {/* Additional Stats Grid */}
       <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 mt-6 sm:mt-8">
         
-        
+        {/* Application Status */}
         <div className="bg-white rounded-lg sm:rounded-xl shadow p-4 sm:p-6">
           <h3 className="text-sm sm:text-base font-semibold text-gray-800 mb-4">Application Status</h3>
           <div className="space-y-2 sm:space-y-3">
@@ -176,7 +176,7 @@ const Analytics = () => {
           </div>
         </div>
 
-        
+        {/* User Distribution */}
         <div className="bg-white rounded-lg sm:rounded-xl shadow p-4 sm:p-6">
           <h3 className="text-sm sm:text-base font-semibold text-gray-800 mb-4">User Distribution</h3>
           <div className="space-y-2 sm:space-y-3">
@@ -195,7 +195,7 @@ const Analytics = () => {
           </div>
         </div>
 
-        
+        {/* Payment Status */}
         <div className="bg-white rounded-lg sm:rounded-xl shadow p-4 sm:p-6">
           <h3 className="text-sm sm:text-base font-semibold text-gray-800 mb-4">Payment Status</h3>
           <div className="space-y-2 sm:space-y-3">

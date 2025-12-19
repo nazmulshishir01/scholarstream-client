@@ -9,7 +9,7 @@ const PaymentSuccess = () => {
   const { scholarshipName, universityName, amount, transactionId } = location.state || {};
 
   useEffect(() => {
-    
+    // Trigger confetti on page load
     confetti({
       particleCount: 100,
       spread: 70,
@@ -17,7 +17,7 @@ const PaymentSuccess = () => {
     });
   }, []);
 
-  
+  // Redirect if no state
   if (!location.state) {
     return <Navigate to="/dashboard/my-applications" replace />;
   }
@@ -31,7 +31,7 @@ const PaymentSuccess = () => {
         className="max-w-md w-full"
       >
         <div className="bg-white rounded-2xl shadow-xl p-8 text-center">
-          
+          {/* Success Icon */}
           <motion.div
             initial={{ scale: 0 }}
             animate={{ scale: 1 }}
@@ -41,7 +41,7 @@ const PaymentSuccess = () => {
             <FaCheckCircle className="text-green-500 text-4xl" />
           </motion.div>
 
-          
+          {/* Success Message */}
           <h1 className="text-2xl font-bold text-gray-800 mb-2">
             Payment Successful!
           </h1>
@@ -49,7 +49,7 @@ const PaymentSuccess = () => {
             Your scholarship application has been submitted successfully.
           </p>
 
-          
+          {/* Details Card */}
           <div className="bg-gray-50 rounded-xl p-6 mb-6 text-left">
             <div className="flex items-center gap-2 text-gray-700 mb-4">
               <FaReceipt className="text-blue-500" />
@@ -77,7 +77,7 @@ const PaymentSuccess = () => {
             </div>
           </div>
 
-          
+          {/* What's Next */}
           <div className="bg-blue-50 rounded-xl p-4 mb-6 text-left">
             <h3 className="font-medium text-blue-800 mb-2">What's Next?</h3>
             <ul className="text-sm text-blue-700 space-y-1">
@@ -87,7 +87,7 @@ const PaymentSuccess = () => {
             </ul>
           </div>
 
-          
+          {/* Action Button */}
           <Link
             to="/dashboard/my-applications"
             className="inline-flex items-center justify-center gap-2 w-full py-3 bg-blue-600 text-white rounded-xl hover:bg-blue-700 transition-colors font-medium"
@@ -96,7 +96,7 @@ const PaymentSuccess = () => {
             <FaArrowRight />
           </Link>
 
-         
+          {/* Secondary Action */}
           <Link
             to="/scholarships"
             className="inline-block mt-4 text-blue-600 hover:underline text-sm"

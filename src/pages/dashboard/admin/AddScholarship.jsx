@@ -88,7 +88,7 @@ const AddScholarship = () => {
       <div className="bg-white rounded-xl shadow-lg p-4 sm:p-6 lg:p-8">
         <form onSubmit={handleSubmit(onSubmit)} className="space-y-4 sm:space-y-6">
           
-          
+          {/* Scholarship Name */}
           <InputField
             label="Scholarship Name"
             register={register}
@@ -98,7 +98,7 @@ const AddScholarship = () => {
             placeholder="e.g., Merit Scholarship 2024"
           />
 
-          
+          {/* University Info Row */}
           <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             <InputField
               label="University Name"
@@ -120,7 +120,7 @@ const AddScholarship = () => {
             />
           </div>
 
-          
+          {/* Location Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <InputField
               label="Country"
@@ -151,7 +151,7 @@ const AddScholarship = () => {
             />
           </div>
 
-          
+          {/* Categories Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <SelectField
               label="Subject Category"
@@ -181,7 +181,7 @@ const AddScholarship = () => {
             />
           </div>
 
-          
+          {/* Fees Row */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
             <InputField
               label="Tuition Fees (Optional)"
@@ -213,7 +213,7 @@ const AddScholarship = () => {
             />
           </div>
 
-         
+          {/* Deadline */}
           <InputField
             label="Application Deadline"
             register={register}
@@ -223,7 +223,7 @@ const AddScholarship = () => {
             required
           />
 
-          
+          {/* Description */}
           <div>
             <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
               Scholarship Description <span className="text-red-500">*</span>
@@ -239,7 +239,7 @@ const AddScholarship = () => {
             )}
           </div>
 
-          
+          {/* Stipend Details */}
           <div>
             <label className="block text-xs sm:text-sm font-medium text-gray-700 mb-1 sm:mb-2">
               Stipend/Coverage Details
@@ -252,7 +252,7 @@ const AddScholarship = () => {
             />
           </div>
 
-          
+          {/* Submit Button */}
           <div className="flex flex-col sm:flex-row gap-2 sm:gap-4 pt-2">
             <button
               type="submit"
