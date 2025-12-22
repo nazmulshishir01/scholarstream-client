@@ -102,14 +102,4 @@ A comprehensive full-stack MERN application designed to connect students with sc
 | `react-hook-form` | ^7.54.2 | Form handling |
 | `swiper` | ^11.2.1 | Touch slider |
 
-### Dev Dependencies
-
-| Package | Version | Purpose |
-|---------|---------|---------|
-| `vite` | ^6.0.5 | Build tool |
-| `tailwindcss` | ^4.1.4 | CSS framework |
-| `daisyui` | ^5.0.0 | UI components |
-| `eslint` | ^9.17.0 | Code linting |
-| `autoprefixer` | ^10.4.20 | CSS vendor prefixes |
-| `postcss` | ^8.5.1 | CSS processing |
 
