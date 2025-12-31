@@ -18,21 +18,6 @@ A comprehensive full-stack MERN application designed to connect students with sc
 ## 📌 Project Overview
 **ScholarStream** simplifies scholarship discovery and application management with a role-based system. Students can explore scholarships using advanced search/filtering and apply with secure Stripe payments. Moderators manage application reviews and feedback, while admins control the platform with analytics, scholarship CRUD, and user-role management.
 
----
-
-## 🖼️ Screenshots
-> Add 2–3 clean screenshots for a more professional README.
-
-**How to add screenshots**
-1. Create a folder named `screenshots/` in the repo root  
-2. Put screenshots there (example names: `home.png`, `dashboard.png`, `scholarship-details.png`)  
-3. Update the image links below
-
-![ScholarStream Preview](./screenshots/home.png)
-
-<!-- Optional -->
-<!-- ![Scholarship Details](./screenshots/scholarship-details.png) -->
-<!-- ![Admin Dashboard](./screenshots/dashboard.png) -->
 
 ---
 
