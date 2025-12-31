@@ -20,11 +20,17 @@ A comprehensive full-stack MERN application designed to connect students with sc
 
 ## 🖼️ Screenshots
 
-| Home | All Scholarships | Admin Dashboard |
-|------|------------------|-----------------|
-| ![Home](https://i.ibb.co.com/N6tH1R07/home-2.png) | ![All Scholarships](https://i.ibb.co.com/KRqWJzg/all-scholarship.jpg) | ![Admin Dashboard](https://i.ibb.co.com/v4RfBR3y/dashboard-scholarship.jpg) |
+<p align="center">
+  <img src="https://i.ibb.co.com/N6tH1R07/home-2.png" alt="Home" width="900" />
+</p>
 
----
+<p align="center">
+  <img src="https://i.ibb.co.com/KRqWJzg/all-scholarship.jpg" alt="All Scholarships" width="900" />
+</p>
+
+<p align="center">
+  <img src="https://i.ibb.co.com/v4RfBR3y/dashboard-scholarship.jpg" alt="Admin Dashboard" width="900" />
+</p>
 
 ## ✨ Features
 
