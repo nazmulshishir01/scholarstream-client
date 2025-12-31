@@ -18,6 +18,11 @@ A comprehensive full-stack MERN application designed to connect students with sc
 ## 📌 Project Overview
 **ScholarStream** simplifies scholarship discovery and application management with a role-based system. Students can explore scholarships using advanced search/filtering and apply with secure Stripe payments. Moderators manage application reviews and feedback, while admins control the platform with analytics, scholarship CRUD, and user-role management.
 
+## 🖼️ Screenshots
+
+| Home | All Scholarships | Admin Dashboard |
+|------|------------------|-----------------|
+| ![Home](https://i.ibb.co.com/N6tH1R07/home-2.png) | ![All Scholarships](https://i.ibb.co.com/KRqWJzg/all-scholarship.jpg) | ![Admin Dashboard](https://i.ibb.co.com/v4RfBR3y/dashboard-scholarship.jpg) |
 
 ---
 
